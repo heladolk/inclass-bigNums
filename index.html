@@ -10,10 +10,15 @@
 	<div>
 		<!-- first add a filter  to line 14 to sort bigNums by size, smallest to largest -->
 		<!-- next edit the same code by adding a 2nd filter which limites the total numbers to 3-->
-		<p>I have {{ bigNums | orderBy | limitTo:3 }}!!</p>
+		<p>I have {{ bigNums | orderBy }}!!</p>
 		<p>I have {{ bigNums | orderBy: '-' | limitTo:3 }}!!</p>
 		<p>Currency example {{ num | currency  }}</p>
 		<p>Number example {{ num | number  }}</p>
+	</div>
+	<div class="">
+		<ul>
+			<li ng-repeat="item in bigNums track by $index"> {{ item }}</li>
+		</ul>
 	</div>
 </body>
 </html>
